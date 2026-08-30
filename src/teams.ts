@@ -1,0 +1,2 @@
+export interface TeamConfig{name:string;short:string;primary:number;secondary:number}
+export const TEAMS:TeamConfig[]=[{name:'Atlético Azul',short:'AZU',primary:0x2563eb,secondary:0xffffff},{name:'Rubro FC',short:'RUB',primary:0xef4444,secondary:0xffffff},{name:'Verde Esporte',short:'VER',primary:0x16a34a,secondary:0xffffff},{name:'Ouro FC',short:'OUR',primary:0xf59e0b,secondary:0x111827}];
