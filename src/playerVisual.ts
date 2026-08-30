@@ -1,0 +1,2 @@
+import * as THREE from 'three';
+export function createPlayer(color:number){const g=new THREE.Group();const mat=new THREE.MeshStandardMaterial({color,roughness:.7});const body=new THREE.Mesh(new THREE.CapsuleGeometry(.58,1.05,5,10),mat);body.position.y=1.25;body.castShadow=true;g.add(body);const head=new THREE.Mesh(new THREE.SphereGeometry(.34,16,12),new THREE.MeshStandardMaterial({color:0xf1c7a5}));head.position.y=2.45;head.castShadow=true;g.add(head);return g}
