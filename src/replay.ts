@@ -1,0 +1,2 @@
+export interface Frame{time:number;ball:{x:number;z:number};players:{id:number;x:number;z:number}[]}
+export class ReplayBuffer{private frames:Frame[]=[];constructor(private maxSeconds=12,private fps=20){}push(frame:Frame){this.frames.push(structuredClone(frame));const max=this.maxSeconds*this.fps;if(this.frames.length>max)this.frames.splice(0,this.frames.length-max)}getAll(){return this.frames}getAt(time:number){if(!this.frames.length)return null;return this.frames.reduce((a,b)=>Math.abs(b.time-time)<Math.abs(a.time-time)?b:a)}clear(){this.frames=[]}}
