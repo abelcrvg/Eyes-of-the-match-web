@@ -1,0 +1,2 @@
+import type {RefereeStats} from './types';
+export function applyDecision(stats:RefereeStats,correct:boolean):RefereeStats{return correct?{score:stats.score+100,correct:stats.correct+1,incorrect:stats.incorrect}:{score:Math.max(0,stats.score-50),correct:stats.correct,incorrect:stats.incorrect+1}}
